@@ -1,4 +1,4 @@
-version: '3.7'
+version: '2.3'
 
 networks:
   default:
@@ -17,6 +17,7 @@ services:
     restart: unless-stopped
     env_file: .env
   rl_coach:
+    runtime: nvidia
     image: aschu/rl_coach
     env_file: .env
     container_name: rl_coach
